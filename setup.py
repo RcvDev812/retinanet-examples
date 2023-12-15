@@ -19,6 +19,7 @@ setup(
                 '-gencode=arch=compute_86,code=sm_86', '-gencode=arch=compute_86,code=compute_86'
             ],
         },
+        include_dirs=['/usr/local/include','/usr/include','/usr/local/include/opencv4','/usr/include/opencv4'],
         libraries=['nvinfer', 'nvinfer_plugin', 'nvonnxparser', 'opencv_core', 'opencv_imgproc', 'opencv_highgui', 'opencv_imgcodecs'])
     ],
     cmdclass={'build_ext': BuildExtension.with_options(no_python_abi_suffix=True)},
